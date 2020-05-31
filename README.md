@@ -11,6 +11,6 @@
 ## Instruction to use Application
   1. Click on Add City button in panel
   2. Enter the city name in input field and click Get weather button
-  3. If city name is correct Weather details of the city will appear oh current panel
+  3. If city name is correct Weather details of the city will appear on current panel
   4. If city name is incorrect it will show "City not Found"
   5. Click on Edit button to change the city of current panel
