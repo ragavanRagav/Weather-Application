@@ -1,0 +1,44 @@
+<page class="body">
+<ActionBar>
+    <StackLayout orientation="horizontal"
+    ios:horizontalAlignment="center"
+    android:horizontalAlignment="left">
+    <Image src="https://cdn2.iconfinder.com/data/icons/unigrid-phantom-weather/60/027_035_wind_direction_cock_weather-512.png" width="100px"height="100px" ></Image>
+    <Label text=" Weather Application" class="title"></Label>
+  </StackLayout>
+</ActionBar>
+<ScrollView>
+    <ListView [items]=weather>
+        <ng-template let-item="item" let-i="index">
+            <StackLayout  marginTop="45px">
+                <StackLayout class="container">
+                    <Button class="add" (tap)="change(i)" text={{ser}}></Button>
+                    <StackLayout *ngIf="item.result; else elseBlock" >
+                        <Label class="location" text = {{item.details.name}},{{item.details.sys.country}}></Label>
+                        <Label class="location" text = {{item.date}},{{item.time}}></Label>
+                        <Image class="laticon location" width="30" height="30"
+                            src="https://cdn0.iconfinder.com/data/icons/search-engine-optimization-1-1/65/39-512.png">
+                        </Image>
+                        <Label class="location" text=Coords:{{item.details.coord.lon}},{{item.details.coord.lat}}></Label>
+                        <Label class="condition" text = {{item.details.weather[0].main}},{{item.details.weather[0].description}}></Label>
+                        <Image width="150" height="100" src="http://openweathermap.org/img/wn/{{item.details.weather[0].icon}}@2x.png">
+                        </Image>
+                        <Label class="temp" text=Temperature:{{item.details.main.temp-273.15}}{{degree}}></Label>
+                        <Image class="temperature" width="30" height="30"
+                            src="http://icons.iconarchive.com/icons/custom-icon-design/lovely-weather/72/wind-night-icon.png">
+                        </Image>
+                        <Label class="wind" text=Wind:{{item.details.wind.speed}}></Label>
+                    </StackLayout>
+                    <ng-template #elseBlock>
+                        <Label class="nofeed" text = {{item.details.name}} ></Label>
+                    </ng-template>
+                    <StackLayout *ngIf="item.display" style="margin-top: -50; position: sticky;">
+                        <TextField class="input" [(ngModel)]="city" hint="Search Your City"></TextField>
+                        <button (tap)="search(i)" class="search" text="Get Weather"></button>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</ScrollView>
+</page>

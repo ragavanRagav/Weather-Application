@@ -1,0 +1,59 @@
+.search{
+    border-radius: 10;
+    background-color: rgb(218, 92, 20);
+    color: white;
+    width: 180;
+    height: 35;
+}
+.body{
+    background-color: rgb(226, 247, 247);
+}
+.container{
+    text-align: center;
+    background-color: rgba(245, 219, 179, 0.651);
+    background-image: url('http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/128/Status-weather-clear-icon.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20%;
+    min-height: 250;
+    width:90%;
+}
+.title{
+    color: rgb(230, 240, 92);
+    font-weight: bold;
+    font-size: 26px;
+}
+ActionBar{
+    background-color: rgba(201, 177, 145, 0.918);
+}
+.input{
+    border-bottom: rgb(46, 198, 209);
+    font-size: large;
+}
+.nofeed{
+    text-align: center;
+    color: rgb(12, 71, 138);
+    font-size: 20px;
+    font-weight: 600;
+}
+.location{
+    color: rgba(27, 142, 209, 0.795);
+    font-size: 20px;
+    font-weight: bold;
+}
+.condition{
+    color: rgba(10, 20, 26, 0.795);
+    font-size: 20px;
+    font-weight: bold;
+}
+.add{
+    font-size: 20;
+    font-weight: 400;
+    background-color: rgba(181, 211, 13, 0.753);
+    border-radius: 50px;
+}
+.wind, .temp,.lat{
+    color: rgb(81, 16, 107);
+    font-size: 20px;
+    font-weight: 500;
+}
