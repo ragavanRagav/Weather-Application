@@ -1,6 +1,7 @@
 # Weather Application using NativeScript and Angular 9!!!
 ## Steps to run the application
-1. Install Node JS if not installed (Use -> https://nodejs.org/)
+1. Install Node JS in your PC (Use -> https://nodejs.org/)
+2. Install Angular CLI by using the command @angular/cli
 2. Install NativeScript CLI Use this Command in Command Line npm install -g nativescript
 3. Install NativeScript Playground and NativeScript Preview App in playstore for mobile
 4. Open Command Prompt Navigate to project directory
